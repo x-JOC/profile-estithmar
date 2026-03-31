@@ -478,7 +478,7 @@
                                 </button>
                                 <button @click="openQRModal('https://drive.google.com/file/d/1mJdIVTBua2mTvkDjTCaE9SQmWagP5Vba/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
-                                    للأفراد: احصل على الرقمية
+                                    للأفراد: احصل على النسخة الرقمية
                                 </button>
                             </div>
                         </div>
@@ -507,7 +507,7 @@
                                 </button>
                                 <button @click="openQRModal('https://drive.google.com/file/d/1W9I7ajbtyCqu-3yrJ4Rxhqg14Yino0mB/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
-                                    للأفراد: احصل على الرقمية
+                                    للأفراد: احصل على النسخة الرقمية
                                 </button>
                             </div>
                         </div>
