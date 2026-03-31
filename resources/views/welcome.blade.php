@@ -499,7 +499,7 @@
                         <div class="flex-grow flex flex-col h-full">
                             <h3 class="text-2xl font-black text-primary mb-3">كتاب الوقف والشركات العائلية</h3>
                             <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                                يقدم الكتاب الوقف والشركات العائليةات وتجارب عملية، تعكس واقع إدارة النظارة والعوائق التي تجاوزها المختصون بخطوات مدروسة وتوجيهات ملهمة.
+                                دراسة بحثية تخصصية تطرح الأوقاف كأداة استراتيجية لحماية الشركات العائلية وضمان استمراريتها عبر الأجيال، من خلال تقديم نماذج عملية وحلول مؤسسية تحفظ الثروات من التشتت، وتحقق التوازن بين الاستدامة المالية والأثر الاجتماعي.
                             </p>
                             <div class="space-y-3 mt-auto w-full">
                                 <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب الوقف والشركات العائلية', '', 'كتاب الوقف والشركات العائلية')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
