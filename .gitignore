@@ -1,0 +1,6 @@
+*.log
+.DS_Store
+/public/hot
+Homestead.json
+Homestead.yaml
+Thumbs.db
