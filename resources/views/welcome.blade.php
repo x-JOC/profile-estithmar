@@ -338,7 +338,7 @@
                     <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
-                    <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل</h2>
+                    <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل القابضة</h2>
                     <p class="text-xl text-secondary font-bold">شركاتنا الرائدة في خدمة قطاع الأوقاف</p>
                 </div>
 
@@ -378,12 +378,10 @@
                                 <span class="font-bold text-success">الذراع الإداري والتشغيلي لمنظومة استثمار المستقبل القابضة</span>، والتي تُعنى في تقديم خدمات استشارية في الإدارة والتشغيل عبر باقات نوعية تسهم في تمكين النُظّار من إدارة مشاريع الأوقاف وفق أحدث الممارسات والحلول الآمنة.
                             </p>
                             
-                            <div class="mt-auto space-y-2">
-                                <button @click="openForm('majales', 'تسجيل اهتمام', 'بباقات وخدمات شركة مجالس النظارة', 'مجالس النظارة')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-success to-success/80 text-white font-bold text-sm py-3.5 rounded-xl shadow-lg hover:shadow-success/30 active:scale-95 transition-all">
-                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-                                    سجل اهتمامك
-                                </button>
-                            </div>
+                            <button @click="openIframe('https://majalisndarah.sa/')" class="mt-auto flex items-center justify-center gap-2 w-full bg-white/50 text-success font-bold text-sm py-3 rounded-xl border border-success/20 hover:bg-success/5 hover:border-success/40 transition-colors">
+                                <span>زيارة موقع مجالس النظارة</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </button>
                         </div>
                     </div>
 
@@ -400,12 +398,10 @@
                                 <span class="font-bold text-sub">الذراع الاستشاري لمنظومة استثمار المستقبل القابضة</span>، والتي تضم نخبة من كبار المستشارين في قطاع الأوقاف والوصايا؛ لتٌقدم حزمة من الخدمات الشاملة والتي تتمثل في الخدمات الشرعية والقانونية، والحوكمة، والخدمات المالية والاستثمارية، وإدارة المنح الخيري، إضافة إلى الخدمات المتعلقة في إنشاء وإدارة الصناديق الوقفية العائلية.
                             </p>
                             
-                            <div class="mt-auto space-y-2">
-                                <button @click="openForm('sana', 'طلب استشارة أو خدمة', 'بواسطة خبراء سنا المستقبل الاستشارية', 'سنا المستقبل')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-[#004145] text-white font-bold text-sm py-3.5 rounded-xl shadow-lg hover:shadow-primary/30 active:scale-95 transition-all">
-                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
-                                    سجل اهتمامك .. واطلب الخدمة
-                                </button>
-                            </div>
+                            <button @click="openIframe('https://sna.com.sa/')" class="mt-auto flex items-center justify-center gap-2 w-full bg-white/50 text-sub font-bold text-sm py-3 rounded-xl border border-sub/20 hover:bg-sub/5 hover:border-sub/40 transition-colors">
+                                <span>زيارة موقع سنا</span>
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                            </button>
                         </div>
                     </div>
 
@@ -424,6 +420,15 @@
                         </div>
                     </div>
 
+                </div>
+
+                <!-- Unified Registration Button -->
+                <div class="mt-8 flex justify-center pb-8">
+                    <button @click="openForm('all_companies', 'تسجيل اهتمام', 'في خدمات منظومة استثمار المستقبل القابضة', 'المنظومة')" class="bg-gradient-to-r from-primary to-[#004145] text-white text-xl font-bold py-4 px-12 rounded-2xl shadow-[0_15px_30px_rgba(0,83,88,0.25)] hover:shadow-[0_20px_40px_rgba(0,83,88,0.35)] active:scale-95 transition-all flex items-center gap-3 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
+                        <span class="relative">سجل اهتمامك بالمنظومة</span>
+                        <svg class="w-6 h-6 relative" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -471,7 +476,7 @@
                                 <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب حوكمة الأوقاف', '', 'حوكمة الأوقاف')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
                                     للجهات: اطلب نسختك المطبوعة
                                 </button>
-                                <button @click="openQRModal()" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
+                                <button @click="openQRModal('https://drive.google.com/file/d/1mJdIVTBua2mTvkDjTCaE9SQmWagP5Vba/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                     للأفراد: احصل على الرقمية
                                 </button>
@@ -479,7 +484,7 @@
                         </div>
                     </div>
 
-                    <!-- Book 2: كتاب يومي -->
+                    <!-- Book 2: كتاب الوقف والشركات العائلية -->
                     <div class="glass-panel rounded-3xl p-8 flex flex-col sm:flex-row items-center sm:items-stretch gap-8 relative border border-transparent hover:border-secondary/30 transition-all text-center sm:text-right">
                         <!-- Simplified Flat Book Thumbnail -->
                         <div class="shrink-0 w-36 h-52 bg-gradient-to-br from-[#149b9e] to-[#0d7375] rounded-lg shadow-xl relative overflow-hidden flex flex-col items-center justify-center">
@@ -487,20 +492,20 @@
                             <div class="text-white/60 mb-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                             </div>
-                            <h3 class="font-black text-2xl text-white mb-1 leading-tight text-center px-1">كتاب<br>يومي</h3>
+                            <h3 class="font-black text-2xl text-white mb-1 leading-tight text-center px-1">كتاب<br>الوقف والشركات العائلية</h3>
                             <p class="text-[0.6rem] text-white/70 mt-auto pb-4">رؤى وتأملات في الأوقاف</p>
                         </div>
 
                         <div class="flex-grow flex flex-col h-full">
-                            <h3 class="text-2xl font-black text-primary mb-3">كتاب يومي</h3>
+                            <h3 class="text-2xl font-black text-primary mb-3">كتاب الوقف والشركات العائلية</h3>
                             <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                                يقدم الكتاب يوميات وتجارب عملية، تعكس واقع إدارة النظارة والعوائق التي تجاوزها المختصون بخطوات مدروسة وتوجيهات ملهمة.
+                                يقدم الكتاب الوقف والشركات العائليةات وتجارب عملية، تعكس واقع إدارة النظارة والعوائق التي تجاوزها المختصون بخطوات مدروسة وتوجيهات ملهمة.
                             </p>
                             <div class="space-y-3 mt-auto w-full">
-                                <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب يومي', '', 'كتاب يومي')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
+                                <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب الوقف والشركات العائلية', '', 'كتاب الوقف والشركات العائلية')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
                                     للجهات: اطلب نسختك المطبوعة
                                 </button>
-                                <button @click="openQRModal()" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
+                                <button @click="openQRModal('https://drive.google.com/file/d/1W9I7ajbtyCqu-3yrJ4Rxhqg14Yino0mB/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                     للأفراد: احصل على الرقمية
                                 </button>
@@ -577,6 +582,40 @@
                                     <option value="خدمات المنح الخيري">خدمات المنح الخيري</option>
                                     <option value="خدمات الصناديق العائلية">الخدمات الصناديق العائلية</option>
                                 </select>
+                            </div>
+                        </div>
+
+                        <!-- Company Selection Dropdown (for Unified Form) -->
+                        <div x-show="formType === 'all_companies'" class="space-y-3 pt-2" x-transition>
+                            <label class="block text-sm font-bold text-gray-700">الخدمة المطلوبة <span class="text-danger">*</span></label>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <label class="border border-gray-200 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50 transition-colors shadow-sm relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-primary/5 opacity-0 group-has-[:checked]:opacity-100 transition-opacity"></div>
+                                    <div class="absolute inset-0 border-2 border-transparent group-has-[:checked]:border-primary rounded-xl transition-colors"></div>
+                                    <input type="checkbox" name="service[]" value="شركة فرادة - المنتجات الرقمية" class="w-5 h-5 text-primary bg-gray-100 border-gray-300 focus:ring-primary rounded z-10 cursor-pointer">
+                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">شركة فرادة - المنتجات الرقمية</span>
+                                </label>
+                                
+                                <label class="border border-gray-200 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50 transition-colors shadow-sm relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-success/5 opacity-0 group-has-[:checked]:opacity-100 transition-opacity"></div>
+                                    <div class="absolute inset-0 border-2 border-transparent group-has-[:checked]:border-success rounded-xl transition-colors"></div>
+                                    <input type="checkbox" name="service[]" value="مجالس النظارة - الخدمات الإدارية والتشغيلية" class="w-5 h-5 text-success bg-gray-100 border-gray-300 focus:ring-success rounded z-10 cursor-pointer">
+                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">مجالس النظارة - الخدمات الإدارية والتشغيلية</span>
+                                </label>
+                                
+                                <label class="border border-gray-200 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50 transition-colors shadow-sm relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-sub/5 opacity-0 group-has-[:checked]:opacity-100 transition-opacity"></div>
+                                    <div class="absolute inset-0 border-2 border-transparent group-has-[:checked]:border-sub rounded-xl transition-colors"></div>
+                                    <input type="checkbox" name="service[]" value="سنا المستقبل - الخدمات الاستشارية والقانونية" class="w-5 h-5 text-sub bg-gray-100 border-gray-300 focus:ring-sub rounded z-10 cursor-pointer">
+                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">سنا المستقبل - الخدمات الاستشارية والقانونية</span>
+                                </label>
+                                
+                                <label class="border border-gray-200 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50 transition-colors shadow-sm relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-gray-100 opacity-0 group-has-[:checked]:opacity-100 transition-opacity"></div>
+                                    <div class="absolute inset-0 border-2 border-transparent group-has-[:checked]:border-gray-400 rounded-xl transition-colors"></div>
+                                    <input type="checkbox" name="service[]" value="اي وقف - خدمات التدريب و التأهيل" class="w-5 h-5 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500 rounded z-10 cursor-pointer">
+                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">اي وقف - خدمات التدريب و التأهيل</span>
+                                </label>
                             </div>
                         </div>
 
@@ -671,7 +710,7 @@
 
                 <!-- Fake QR Code Container -->
                 <div class="bg-white border-2 border-gray-100 p-4 rounded-xl shadow-inner mx-auto w-48 h-48 flex items-center justify-center relative overflow-hidden group mb-2">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://estithmar.example.com" alt="QR Code" class="w-full h-full object-contain mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105">
+                    <img :src="currentQRUrl ? ('https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(currentQRUrl)) : 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://estithmar.example.com'" alt="QR Code" class="w-full h-full object-contain mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105">
                     
                     <!-- Scanning line animation -->
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent shadow-[0_0_15px_rgba(0,83,88,0.5)] animate-[scan_2.5s_ease-in-out_infinite]"></div>
@@ -707,7 +746,7 @@
                  x-transition:leave="transition duration-300 ease-in"
                  x-transition:leave-start="opacity-100 scale-100 translate-y-0"
                  x-transition:leave-end="opacity-0 scale-95 translate-y-8"
-                 class="bg-white rounded-[2rem] w-full max-w-6xl h-full max-h-[90vh] relative shadow-2xl overflow-hidden flex flex-col border border-white/20">
+                 class="bg-white rounded-[2rem] w-[95vw] h-full max-h-[95vh] relative shadow-2xl overflow-hidden flex flex-col border border-white/20">
                  
                 <!-- Modal Header -->
                 <div class="flex items-center justify-between px-6 py-4 bg-gray-50 border-b border-gray-100">
@@ -741,6 +780,7 @@
                 showError: false,
                 
                 showQRModal: false,
+                currentQRUrl: '',
                 showIframeModal: false,
                 currentIframeUrl: '',
                 iframeLoading: true,
@@ -777,7 +817,8 @@
                     this.goTo(5); // Unified Form Screen
                 },
 
-                openQRModal() {
+                openQRModal(url = '') {
+                    this.currentQRUrl = url;
                     this.showQRModal = true;
                     this.resetTimer();
                 },
@@ -827,11 +868,19 @@
                     let finalNotes = formData.get('notes') || 'تم الطلب عبر نظام شاشة المعرض التفاعلية';
                     if (entity) finalNotes += ` | جهة العمل: ${entity}`;
                     if (book) finalNotes += ` | الكتاب المطلوب: ${book}`;
+                    
+                    let serviceVal = '';
+                    if (this.formType === 'all_companies') {
+                        const selectedServices = formData.getAll('service[]');
+                        serviceVal = selectedServices.length > 0 ? selectedServices.join('، ') : 'لم يتم التحديد';
+                    } else {
+                        serviceVal = formData.get('service') || this.formTitle || '';
+                    }
 
                     data.append('name', formData.get('name') || '');
                     data.append('phone', formData.get('phone') || '');
                     data.append('company', this.selectedCompany || 'غير محدد');
-                    data.append('service', formData.get('service') || this.formTitle || '');
+                    data.append('service', serviceVal);
                     data.append('notes', finalNotes);
 
                     data.append('pageType', formData.get('pageType') || 'شاشة العرض الموحدة (تصميم حديث)');
