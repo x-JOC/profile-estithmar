@@ -338,8 +338,8 @@
                     <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
-                    <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">الأذرع لمنظومة استثمار المستقبل القابضة</h2>
-                    <p class="text-xl text-secondary font-bold">تعرّف على شركات استثمار المستقبل القابضة</p>
+                    <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل</h2>
+                    <p class="text-xl text-secondary font-bold">شركاتنا الرائدة في خدمة قطاع الأوقاف</p>
                 </div>
 
                 <!-- Modern Grid -->
