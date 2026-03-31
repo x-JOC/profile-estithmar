@@ -5,7 +5,70 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-ExtBd.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rawasi';
+    src: url('/font/itfRawasiDisplayARLT-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-rawasi: 'Rawasi', sans-serif;
+    
+    --color-primary: #005358;
+    --color-secondary: #ceaf87;
+    --color-accent: #8b9d90;
+    --color-danger: #e8493c;
+    --color-success: #00b48d;
+    --color-sub: #149b9e;
+    --color-main: #000000;
+}
+
+/* Base styles to enforce the font by default */
+@layer base {
+    body {
+        font-family: var(--font-rawasi);
+        color: var(--color-main);
+    }
+}
+
+/* Utilities for hiding scrollbar that might be useful for a kiosk app */
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
