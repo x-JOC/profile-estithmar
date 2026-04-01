@@ -221,7 +221,7 @@
     <button x-show="screen !== 1" x-cloak
             @click="goTo(1)"
             x-transition
-            class="fixed top-8 right-8 z-50 bg-white/80 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.05)] border border-white rounded-full w-14 h-14 flex items-center justify-center text-primary hover:bg-primary hover:text-white hover:border-transparent hover:shadow-[0_10px_25px_rgba(0,83,88,0.3)] transition-all transform active:scale-95 duration-300">
+            class="fixed top-8 left-8 z-50 bg-white/80 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.05)] border border-white rounded-full w-14 h-14 flex items-center justify-center text-primary hover:bg-primary hover:text-white hover:border-transparent hover:shadow-[0_10px_25px_rgba(0,83,88,0.3)] transition-all transform active:scale-95 duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
@@ -335,7 +335,7 @@
             <div class="max-w-[70rem] mx-auto w-full">
                 <!-- Header -->
                 <div class="text-center mb-10 relative">
-                    <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95">
+                    <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95 z-20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
                     <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل القابضة</h2>
@@ -446,7 +446,7 @@
             <div class="max-w-[65rem] mx-auto w-full">
                 <!-- Header -->
                 <div class="text-center mb-16 relative">
-                    <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95">
+                    <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95 z-20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
                     <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">إصداراتنا المعرفية</h2>
@@ -464,7 +464,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
                             </div>
                             <h3 class="font-black text-xl text-white mb-1 leading-tight text-center px-1">حوكمة<br>الأوقاف</h3>
-                            <p class="text-[0.6rem] text-white/70 mt-auto pb-4">دليل تطبيقي شامل</p>
+                            <p class="text-[0.6rem] text-white/70 mt-auto pb-4">النظرية والتطبيق</p>
                         </div>
 
                         <div class="flex-grow flex flex-col h-full">
@@ -476,7 +476,7 @@
                                 <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب حوكمة الأوقاف', '', 'حوكمة الأوقاف')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
                                     للجهات: اطلب نسختك المطبوعة
                                 </button>
-                                <button @click="openQRModal('https://drive.google.com/file/d/1mJdIVTBua2mTvkDjTCaE9SQmWagP5Vba/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
+                                <button @click="openQRModal('{{ asset('images/qr-code/hokma-book.png') }}')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                     للأفراد: احصل على النسخة الرقمية
                                 </button>
@@ -493,7 +493,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                             </div>
                             <h3 class="font-black text-2xl text-white mb-1 leading-tight text-center px-1">كتاب<br>الوقف والشركات العائلية</h3>
-                            <p class="text-[0.6rem] text-white/70 mt-auto pb-4">رؤى وتأملات في الأوقاف</p>
+                            <p class="text-[0.6rem] text-white/70 mt-auto pb-4">الفرص والتحديات ونماذج العمل</p>
                         </div>
 
                         <div class="flex-grow flex flex-col h-full">
@@ -505,7 +505,7 @@
                                 <button @click="openForm('book', 'طلب نسخة مطبوعة', 'كتاب الوقف والشركات العائلية', '', 'كتاب الوقف والشركات العائلية')" class="w-full flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 hover:bg-primary/5 font-bold text-sm py-3.5 rounded-xl transition-all shadow-sm">
                                     للجهات: اطلب نسختك المطبوعة
                                 </button>
-                                <button @click="openQRModal('https://drive.google.com/file/d/1W9I7ajbtyCqu-3yrJ4Rxhqg14Yino0mB/view?usp=sharing')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
+                                <button @click="openQRModal('{{ asset('images/qr-code/awqaf_book.png') }}')" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-[#c29b6f] text-white font-bold text-sm py-3.5 rounded-xl transition-all shadow-md active:scale-95">
                                     <svg class="w-5 h-5 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                                     للأفراد: احصل على النسخة الرقمية
                                 </button>
@@ -708,9 +708,9 @@
                     <p class="text-sm text-gray-600 font-bold">امسح الرمز بكاميرا الجوال للتحميل</p>
                 </div>
 
-                <!-- Fake QR Code Container -->
+                <!-- QR Code Container -->
                 <div class="bg-white border-2 border-gray-100 p-4 rounded-xl shadow-inner mx-auto w-48 h-48 flex items-center justify-center relative overflow-hidden group mb-2">
-                    <img :src="currentQRUrl ? ('https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=' + encodeURIComponent(currentQRUrl)) : 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://estithmar.example.com'" alt="QR Code" class="w-full h-full object-contain mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105">
+                    <img :src="currentQRUrl" alt="QR Code" class="w-full h-full object-contain mix-blend-multiply opacity-90 transition-transform duration-500 group-hover:scale-105">
                     
                     <!-- Scanning line animation -->
                     <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent shadow-[0_0_15px_rgba(0,83,88,0.5)] animate-[scan_2.5s_ease-in-out_infinite]"></div>
