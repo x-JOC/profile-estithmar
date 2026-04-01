@@ -313,30 +313,65 @@
                 <p class="text-xl text-secondary font-bold">يرجى اختيار الوجهة المناسبة لك للتعرف على منظومتنا</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
-                <!-- Option 1: Companies -->
-                <div @click="goTo(3)" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,83,88,0.15)] border-2 border-transparent hover:border-primary/20 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500 delay-75 border-4 border-gray-50">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+            <div class="flex flex-col lg:flex-row gap-8 w-full max-w-[85rem] items-stretch justify-center">
+                <!-- Core Services (Right Side in RTL) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow">
+                    <!-- Option 1: Companies -->
+                    <div @click="goTo(3)" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,83,88,0.15)] border-2 border-transparent hover:border-primary/20 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500 delay-75 border-4 border-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-primary mb-4 z-10">الشركات التابعة للمنظومة</h3>
+                        <p class="text-gray-600 text-lg z-10 leading-relaxed">تعرف على نسيجنا المعرفي وأذرعنا الفنية والإدارية والاستشارية</p>
+                        <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="bg-primary/10 text-primary font-bold px-6 py-2 rounded-full">استكشف الآن &larr;</span>
+                        </div>
                     </div>
-                    <h3 class="text-3xl font-bold text-primary mb-4 z-10">الشركات التابعة للمنظومة</h3>
-                    <p class="text-gray-600 text-lg z-10">تعرف على نسيجنا المعرفي وأذرعنا الفنية والإدارية والاستشارية</p>
-                    <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <span class="bg-primary/10 text-primary font-bold px-6 py-2 rounded-full">استكشف الآن &larr;</span>
+
+                    <!-- Option 2: Books -->
+                    <div @click="goTo(4)" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(206,175,135,0.2)] border-2 border-transparent hover:border-secondary/30 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500 delay-75 border-4 border-gray-50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-primary mb-4 z-10">الأبحاث والكتب الجديدة</h3>
+                        <p class="text-gray-600 text-lg z-10 leading-relaxed">اطلع على أحدث إصداراتنا المتخصصة في مجال الأوقاف والوصايا</p>
+                        <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="bg-secondary/10 text-primary font-bold px-6 py-2 rounded-full">تصفح المكتبة &larr;</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Option 2: Books -->
-                <div @click="goTo(4)" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(206,175,135,0.2)] border-2 border-transparent hover:border-secondary/30 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500 delay-75 border-4 border-gray-50">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                <!-- Independent Separator -->
+                <div class="hidden lg:block w-px bg-primary/10 self-stretch my-10 opacity-50"></div>
+
+                <!-- Product Highlight (Left Side in RTL) -->
+                <div class="lg:w-1/3 flex flex-col">
+                    <div class="flex items-center gap-3 mb-4 pr-4">
+                        <span class="h-px w-8 bg-success/40"></span>
+                        <span class="text-success font-black text-xs uppercase tracking-widest">من منتجاتنا الرقمية</span>
                     </div>
-                    <h3 class="text-3xl font-bold text-primary mb-4 z-10">الأبحاث والكتب الجديدة</h3>
-                    <p class="text-gray-600 text-lg z-10">اطلع على أحدث إصداراتنا المتخصصة في مجال الأوقاف والوصايا</p>
-                    <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                        <span class="bg-secondary/10 text-primary font-bold px-6 py-2 rounded-full">تصفح المكتبة &larr;</span>
+
+                    <!-- Option 3: Wdeem -->
+                    <div @click="openQRModal('{{ asset('images/qr-code/wdeem-qr.png') }}', 'منصة وديم', 'امسح الرمز بصورة مباشرة للبدء في صياغة الأوقاف والوصايا مجانًا')" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,180,141,0.15)] border-2 border-success/30 relative overflow-hidden bg-gradient-to-b from-white/50 to-success/5 flex-grow">
+                        <div class="absolute top-6 right-6 z-20">
+                            <span class="bg-success text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg animate-pulse uppercase tracking-wider">مجانية بالكامل</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-success/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500 delay-75 border-4 border-success/10 p-4">
+                            <img src="{{ asset('images/wdeem.webp') }}" alt="Wdeem" class="w-full h-full object-contain">
+                        </div>
+                        <h3 class="text-3xl font-bold text-primary mb-4 z-10">منصة وديم</h3>
+                        <p class="text-gray-700 text-lg z-10 font-bold leading-relaxed">لتقديم والوثائق والوصايا <span class="text-success font-black underline decoration-success/30 underline-offset-4 italic">مجانًا</span></p>
+                        <p class="text-gray-500 text-sm mt-2 z-10">احصل على وثيقتك الوقفية ووصيتك مجانًا</p>
+                        
+                        <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <span class="bg-success/10 text-success font-bold px-8 py-3 rounded-full border border-success/20 flex items-center gap-2">
+                                <span>افتح الرمز السريع</span>
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v1m0 11v1m5-6h-1m-11 0h-1M5.05 6.464L4.343 5.757m15.314 15.314l-.707-.707M18.243 5.757l-.707.707M6.464 18.243l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -724,8 +759,8 @@
                     <div class="w-16 h-16 bg-gradient-to-br from-secondary/20 to-secondary/5 text-secondary rounded-full flex items-center justify-center mx-auto mb-4 border border-secondary/20 shadow-inner">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                     </div>
-                    <h3 class="text-2xl font-black text-primary mb-2">النسخة الرقمية</h3>
-                    <p class="text-sm text-gray-600 font-bold">امسح الرمز بكاميرا الجوال للتحميل</p>
+                    <h3 class="text-2xl font-black text-primary mb-2" x-text="qrTitle"></h3>
+                    <p class="text-sm text-gray-600 font-bold" x-text="qrNote"></p>
                 </div>
 
                 <!-- QR Code Container -->
@@ -799,16 +834,9 @@
                 showSuccess: false,
                 showError: false,
                 
-                showQRModal: false,
-                currentQRUrl: '',
-                showIframeModal: false,
-                currentIframeUrl: '',
-                iframeLoading: true,
-                formTitle: '',
-                formSubTitle: '',
-                formType: '', // 'majales', 'sana', 'book'
-                selectedCompany: '',
                 selectedBook: '',
+                qrTitle: '',
+                qrNote: '',
                 
                 init() {
                     this.resetTimer();
@@ -837,8 +865,10 @@
                     this.goTo(5); // Unified Form Screen
                 },
 
-                openQRModal(url = '') {
+                openQRModal(url = '', title = 'النسخة الرقمية', note = 'امسح الرمز بكاميرا الجوال للتحميل') {
                     this.currentQRUrl = url;
+                    this.qrTitle = title;
+                    this.qrNote = note;
                     this.showQRModal = true;
                     this.resetTimer();
                 },
