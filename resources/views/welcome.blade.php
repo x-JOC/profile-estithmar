@@ -238,7 +238,7 @@
     
     <!-- Floating Consultation Hook (Top Right) -->
     <div class="fixed top-8 right-8 z-50">
-        <button @click="openIframe('http://forum.estithmar.org.sa/')" 
+        <button @click="openIframe('https://forum.estithmar.org.sa/')" 
                 class="bg-gradient-to-r from-[#e8493c] to-[#b63a30] text-white flex items-center justify-center gap-3 px-6 py-4 rounded-full shadow-[0_12px_24px_-4px_rgba(232,73,60,0.4)] hover:shadow-[0_16px_32px_-4px_rgba(232,73,60,0.5)] hover:-translate-y-1 active:scale-95 transition-all duration-300 border border-white/20 group font-bold">
             <span class="text-sm md:text-base font-black drop-shadow-md">احجز استشارتك المجانية</span>
             <svg class="w-6 h-6 drop-shadow-md shrink-0 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
