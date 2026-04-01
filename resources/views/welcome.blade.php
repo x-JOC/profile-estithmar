@@ -100,6 +100,15 @@
         .animation-delay-4000 {
             animation-delay: 4s;
         }
+        
+        /* RTL Horizontal Bounce */
+        @keyframes bounce-x {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-5px); }
+        }
+        .animate-bounce-x {
+            animation: bounce-x 1s infinite;
+        }
 
         /* 3D Book Styles */
         .book-container {
@@ -226,6 +235,17 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
     </button>
+    
+    <!-- Floating Consultation Hook (Top Right) -->
+    <div class="fixed top-8 right-8 z-50">
+        <button @click="openIframe('http://forum.estithmar.org.sa/')" 
+                class="bg-gradient-to-r from-[#e8493c] to-[#b63a30] text-white flex items-center justify-center gap-3 px-6 py-4 rounded-full shadow-[0_12px_24px_-4px_rgba(232,73,60,0.4)] hover:shadow-[0_16px_32px_-4px_rgba(232,73,60,0.5)] hover:-translate-y-1 active:scale-95 transition-all duration-300 border border-white/20 group font-bold">
+            <span class="text-sm md:text-base font-black drop-shadow-md">احجز استشارتك المجانية</span>
+            <svg class="w-6 h-6 drop-shadow-md shrink-0 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l-7 7 7 7" />
+            </svg>
+        </button>
+    </div>
 
     <!-- Main Screens Container -->
     <div class="relative z-10 w-full h-screen">
@@ -243,10 +263,10 @@
             <div class="flex-col items-center w-full max-w-4xl mx-auto flex h-full justify-center">
                 
                 <!-- Logos Area (Glassmorphism layout) -->
-                <div class="mb-12 flex flex-col items-center">
-                    <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل القابضة" class="w-72 lg:w-80 mb-10 drop-shadow-md">
+                <div class="mb-14 flex flex-col items-center">
+                    <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل القابضة" class="w-96 lg:w-[28rem] mb-20 drop-shadow-md">
                     
-                    <div class="inline-flex items-center justify-center gap-3 md:gap-6 glass-panel px-6 md:px-8 py-4 rounded-2xl relative overflow-hidden mx-auto shadow-sm">
+                    <div class="inline-flex items-center justify-center gap-4 md:gap-8 glass-panel pt-10 px-8 md:px-12 py-6 rounded-[2.5rem] relative overflow-hidden mx-auto shadow-md">
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_3s_infinite] -translate-x-[200%]"></div>
                         <img src="{{ asset('images/faradah.svg') }}" alt="فرادة" class="h-7 md:h-9">
                         <div class="w-px h-8 md:h-10 bg-gray-300/50"></div>
@@ -375,7 +395,7 @@
                         
                         <div class="p-6 pt-0 flex-grow flex flex-col">
                             <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
-                                <span class="font-bold text-success">الذراع الإداري والتشغيلي لمنظومة استثمار المستقبل القابضة</span>، والتي تُعنى في تقديم خدمات استشارية في الإدارة والتشغيل عبر باقات نوعية تسهم في تمكين النُظّار من إدارة مشاريع الأوقاف وفق أحدث الممارسات والحلول الآمنة.
+                                <span class="font-bold text-success">الذراع الإداري والتشغيلي لمنظومة استثمار المستقبل القابضة</span>، والتي تُعنى في تقديم حلول إدارية وتشغيلية عبر باقات نوعية تسهم في تمكين النُظّار من إدارة مشاريع الأوقاف وفق أحدث الممارسات والحلول الآمنة.
                             </p>
                             
                             <button @click="openIframe('https://majalisndarah.sa/')" class="mt-auto flex items-center justify-center gap-2 w-full bg-white/50 text-success font-bold text-sm py-3 rounded-xl border border-success/20 hover:bg-success/5 hover:border-success/40 transition-colors">
