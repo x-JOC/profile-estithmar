@@ -364,7 +364,7 @@
                         </div>
                         <h3 class="text-3xl font-bold text-primary mb-4 z-10">منصة وديم</h3>
                         <p class="text-gray-700 text-lg z-10 font-bold leading-relaxed">لتقديم والوثائق والوصايا <span class="text-success font-black underline decoration-success/30 underline-offset-4 italic">مجانًا</span></p>
-                        <p class="text-gray-500 text-sm mt-2 z-10">احصل على وثيقتك الوقفية ووصيتك مجانًا</p>
+                        <p class="text-gray-500 text-sm mt-2 z-10">احصل على الوثائق الوقفية والوصايا مجانًا</p>
                         
                         <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                             <span class="bg-success/10 text-success font-bold px-8 py-3 rounded-full border border-success/20 flex items-center gap-2">
