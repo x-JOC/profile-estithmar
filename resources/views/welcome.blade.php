@@ -613,8 +613,8 @@
                                 <label class="border border-gray-200 rounded-xl p-4 flex items-center gap-3 cursor-pointer hover:bg-gray-50 transition-colors shadow-sm relative group overflow-hidden">
                                     <div class="absolute inset-0 bg-gray-100 opacity-0 group-has-[:checked]:opacity-100 transition-opacity"></div>
                                     <div class="absolute inset-0 border-2 border-transparent group-has-[:checked]:border-gray-400 rounded-xl transition-colors"></div>
-                                    <input type="checkbox" name="service[]" value="اي وقف - خدمات التدريب و التأهيل" class="w-5 h-5 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500 rounded z-10 cursor-pointer">
-                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">اي وقف - خدمات التدريب و التأهيل</span>
+                                    <input type="checkbox" name="service[]" value="آي وقف - خدمات التدريب و التأهيل" class="w-5 h-5 text-gray-600 bg-gray-100 border-gray-300 focus:ring-gray-500 rounded z-10 cursor-pointer">
+                                    <span class="text-sm font-bold text-gray-800 z-10 leading-relaxed">آي وقف - خدمات التدريب و التأهيل</span>
                                 </label>
                             </div>
                         </div>
@@ -852,12 +852,9 @@
                 },
                 
                 submitForm() {
-                    // SILENT AND INSTANT SUBMISSION
-                    // The user requested NO WAITING time before showing success.
-                    // We immediately show success, and trigger the fetch in the background.
-                    
+                    // إخفاء رسالة الخطأ إن وجدت
                     this.showError = false;
-                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbZyMuoZ_xSuW3HH8-wjjD3XPywJDRPTKDfd6lIecIWpVsKVQygk1CmmCYskRsJr5qqA/exec';
+                    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl5HP3-2vKvb9BlurN91YReRoQ1JUqkHKcDgJEKqLmBh2C-cYJB97g3gzSIqg_x8VkeQ/exec';
                     const form = document.getElementById('interestForm');
                     const formData = new FormData(form);
                     const data = new URLSearchParams();
@@ -869,19 +866,33 @@
                     if (entity) finalNotes += ` | جهة العمل: ${entity}`;
                     if (book) finalNotes += ` | الكتاب المطلوب: ${book}`;
                     
-                    let serviceVal = '';
-                    if (this.formType === 'all_companies') {
-                        const selectedServices = formData.getAll('service[]');
-                        serviceVal = selectedServices.length > 0 ? selectedServices.join('، ') : 'لم يتم التحديد';
-                    } else {
-                        serviceVal = formData.get('service') || this.formTitle || '';
-                    }
-
+                    // إرسال البيانات الأساسية
                     data.append('name', formData.get('name') || '');
                     data.append('phone', formData.get('phone') || '');
                     data.append('company', this.selectedCompany || 'غير محدد');
-                    data.append('service', serviceVal);
                     data.append('notes', finalNotes);
+
+                    // ==========================================
+                    // التعديل هنا: إرسال كل خدمة بشكل منفصل بدلاً من دمجها
+                    // ==========================================
+                    if (this.formType === 'all_companies') {
+                        const selectedServices = formData.getAll('service[]');
+                        if (selectedServices.length > 0) {
+                            // إرسال كل خيار كقيمة منفصلة ليتعرف عليها قوقل شيت كمصفوفة (Array)
+                            selectedServices.forEach(service => {
+                                data.append('service[]', service);
+                            });
+                        } else {
+                            data.append('service', 'لم يتم التحديد');
+                        }
+                    } else {
+                        let singleService = formData.get('service') || this.formTitle || '';
+                        if (this.formType === 'book' && book) {
+                            singleService = `${this.formTitle} - ${book}`;
+                        }
+                        data.append('service', singleService);
+                    }
+                    // ==========================================
 
                     data.append('pageType', formData.get('pageType') || 'شاشة العرض الموحدة (تصميم حديث)');
                     data.append('deviceType', 'Kiosk / TouchScreen');
@@ -892,7 +903,7 @@
                     data.append('timestamp', new Date().toISOString());
                     data.append('timezone', Intl.DateTimeFormat().resolvedOptions().timeZone);
 
-                    // Show success instantly
+                    // إظهار رسالة النجاح فوراً
                     this.showSuccess = true;
                     
                     setTimeout(() => {
@@ -901,7 +912,7 @@
                         }
                     }, 8000);
 
-                    // Background Network Request
+                    // إرسال البيانات في الخلفية
                     fetch(SCRIPT_URL, {
                         method: 'POST',
                         mode: 'no-cors',
@@ -915,8 +926,6 @@
                     })
                     .catch(error => {
                         console.error('Background submission error (silent bypass):', error);
-                        // We intentionally don't drop the success state since the user asked for instant transition, 
-                        // but if it completely fails to send, we might quietly log it.
                     });
                 }
             }
