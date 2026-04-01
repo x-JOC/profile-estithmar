@@ -354,7 +354,7 @@
                     </div>
 
                     <!-- Option 3: Wdeem -->
-                    <div @click="openQRModal('{{ asset('images/qr-code/wdeem-qr.png') }}', 'منصة وديم', 'امسح الرمز بصورة مباشرة للبدء في صياغة الأوقاف والوصايا مجانًا')" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,180,141,0.15)] border-2 border-success/30 relative overflow-hidden bg-gradient-to-b from-white/50 to-success/5 h-full">
+                    <div @click="openQRModal('{{ asset('images/qr-code/wdeem-qr.png') }}', 'منصة وديم', 'امسح الرمز للحصول على وثائق الأوقاف والوصايا مجانًا')" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,180,141,0.15)] border-2 border-success/30 relative overflow-hidden bg-gradient-to-b from-white/50 to-success/5 h-full">
                         <div class="absolute top-6 right-6 z-20">
                             <span class="bg-success text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg animate-pulse uppercase tracking-wider">مجانية بالكامل</span>
                         </div>
