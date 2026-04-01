@@ -387,31 +387,36 @@
              x-transition:leave="transition duration-500 ease-in"
              x-transition:leave-start="opacity-100"
              x-transition:leave-end="opacity-0 -translate-x-12"
-             class="absolute inset-0 p-6 pt-20 pb-12 touch-scroll overflow-y-auto pointer-events-auto h-full flex flex-col justify-center">
+             class="absolute inset-0 p-6 pt-12 pb-6 touch-scroll overflow-y-auto pointer-events-auto h-full flex flex-col justify-center">
              
             <div class="max-w-[70rem] mx-auto w-full">
                 <!-- Header -->
-                <div class="text-center mb-10 relative">
+                <div class="text-center mb-6 relative">
                     <button @click="goTo(2)" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/50 hover:bg-white text-primary rounded-full p-3 shadow-sm transition-all border border-gray-100 hover:scale-105 active:scale-95 z-20">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
                     <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل القابضة</h2>
-                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">شركة استثمار المستقبل القابضة، منظومة متكاملة لخدمة الأوقاف، نجمع فيها بين الإتقان، والاستدامة، وتعظيم الأثر، من خلال خدمات استشارية وإدارية وتشغيلية وتقنية متخصصة.</p>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium mb-3">شركة استثمار المستقبل القابضة، منظومة متكاملة لخدمة الأوقاف، نجمع فيها بين الإتقان، والاستدامة، وتعظيم الأثر، من خلال خدمات استشارية وإدارية وتشغيلية وتقنية متخصصة.</p>
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <span class="h-px w-10 bg-secondary/30"></span>
+                        <p class="text-base text-secondary font-bold uppercase tracking-wider">شركاتنا الرائدة في خدمة قطاع الأوقاف</p>
+                        <span class="h-px w-10 bg-secondary/30"></span>
+                    </div>
                 </div>
 
                 <!-- Modern Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-4">
                     
                     <!-- Faradah Card -->
                     <div class="glass-panel rounded-3xl overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] relative group">
                         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50 group-hover:opacity-100 transition-opacity"></div>
                         
-                        <div class="h-32 flex items-center justify-center relative p-6">
-                            <img src="{{ asset('images/faradah.svg') }}" alt="فرادة" class="h-14 object-contain z-10 transition-transform group-hover:scale-105">
+                        <div class="h-28 flex items-center justify-center relative p-4">
+                            <img src="{{ asset('images/faradah.svg') }}" alt="فرادة" class="h-12 object-contain z-10 transition-transform group-hover:scale-105">
                         </div>
                         
-                        <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                        <div class="p-5 pt-0 flex-grow flex flex-col">
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-grow">
                                 <span class="font-bold text-accent">الذراع التقني لمنظومة استثمار المستقبل القابضة</span>، وهي تُعنى بتقديم حلول تقنية آمنة لقطاع الأوقاف والوصايا، ومن منتجاتها منصة حباء المتخصصة في إدارة المنح عبر منظومة تقنية متكاملة، ومنصة سواقف المتخصصة في ربط النُظار بمزودي الخدمات، ومنصة وديم المتخصصة في تقديم نماذج الوثائق والوصايا مجانًا.
                             </p>
 
@@ -426,12 +431,12 @@
                     <div class="glass-panel rounded-3xl overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] relative group border border-success/20">
                         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-success/50 via-success to-success/50 opacity-100 transition-opacity"></div>
                         
-                        <div class="h-32 flex items-center justify-center relative p-6">
-                            <img src="{{ asset('images/majales.svg') }}" alt="مجالس النظارة" class="h-19 object-contain z-10 transition-transform group-hover:scale-105">
+                        <div class="h-28 flex items-center justify-center relative p-4">
+                            <img src="{{ asset('images/majales.svg') }}" alt="مجالس النظارة" class="h-16 object-contain z-10 transition-transform group-hover:scale-105">
                         </div>
                         
-                        <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                        <div class="p-5 pt-0 flex-grow flex flex-col">
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-grow">
                                 <span class="font-bold text-success">الذراع الإداري والتشغيلي لمنظومة استثمار المستقبل القابضة</span>، والتي تُعنى في تقديم حلول إدارية وتشغيلية عبر باقات نوعية تسهم في تمكين النُظّار من إدارة مشاريع الأوقاف وفق أحدث الممارسات والحلول الآمنة.
                             </p>
                             
@@ -446,12 +451,12 @@
                     <div class="glass-panel rounded-3xl overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] relative group border border-secondary/30">
                         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-primary to-secondary opacity-100"></div>
                         
-                        <div class="h-32 flex items-center justify-center relative p-6">
-                            <img src="{{ asset('images/sna.svg') }}" alt="سنا المستقبل" class="h-16 object-contain z-10 transition-transform group-hover:scale-105">
+                        <div class="h-28 flex items-center justify-center relative p-4">
+                            <img src="{{ asset('images/sna.svg') }}" alt="سنا المستقبل" class="h-14 object-contain z-10 transition-transform group-hover:scale-105">
                         </div>
                         
-                        <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                        <div class="p-5 pt-0 flex-grow flex flex-col">
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-grow">
                                 <span class="font-bold text-sub">الذراع الاستشاري لمنظومة استثمار المستقبل القابضة</span>، والتي تضم نخبة من كبار المستشارين في قطاع الأوقاف والوصايا؛ لتٌقدم حزمة من الخدمات الشاملة والتي تتمثل في الخدمات الشرعية والقانونية، والحوكمة، والخدمات المالية والاستثمارية، وإدارة المنح الخيري، إضافة إلى الخدمات المتعلقة في إنشاء وإدارة الصناديق الوقفية العائلية.
                             </p>
                             
@@ -466,12 +471,12 @@
                     <div class="glass-panel rounded-3xl overflow-hidden flex flex-col transform transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] relative group border border-gray-200">
                         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-400 via-gray-600 to-gray-400 opacity-70"></div>
                         
-                        <div class="h-32 flex items-center justify-center relative p-6">
-                            <img src="{{ asset('images/iwqf.svg') }}" alt="iwqf" class="h-16 object-contain z-10 transition-transform group-hover:scale-105">
+                        <div class="h-28 flex items-center justify-center relative p-4">
+                            <img src="{{ asset('images/iwqf.svg') }}" alt="iwqf" class="h-14 object-contain z-10 transition-transform group-hover:scale-105">
                         </div>
                         
-                        <div class="p-6 pt-0 flex-grow flex flex-col">
-                            <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">
+                        <div class="p-5 pt-0 flex-grow flex flex-col">
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4 flex-grow">
                                 <span class="font-bold text-gray-800">الذراع التدريبي لمنظومة استثمار المستقبل</span>، والتي تُعنى في تدريب وتأهيل نُظّار الأوقاف وفق المعايير الدولية الوقفية.
                             </p>
                         </div>
@@ -480,7 +485,7 @@
                 </div>
 
                 <!-- Unified Registration Button -->
-                <div class="mt-8 flex justify-center pb-8">
+                <div class="mt-2 flex justify-center pb-4">
                     <button @click="openForm('all_companies', 'تسجيل اهتمام', 'في خدمات منظومة استثمار المستقبل القابضة', 'المنظومة')" class="bg-gradient-to-r from-primary to-[#004145] text-white text-xl font-bold py-4 px-12 rounded-2xl shadow-[0_15px_30px_rgba(0,83,88,0.25)] hover:shadow-[0_20px_40px_rgba(0,83,88,0.35)] active:scale-95 transition-all flex items-center gap-3 relative overflow-hidden group">
                         <div class="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></div>
                         <span class="relative">سجل اهتمامك بالمنظومة</span>
