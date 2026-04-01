@@ -266,7 +266,7 @@
                 <div class="mb-14 flex flex-col items-center">
                     <img src="{{ asset('images/logo.svg') }}" alt="استثمار المستقبل القابضة" class="w-96 lg:w-[28rem] mb-20 drop-shadow-md">
                     
-                    <div class="inline-flex items-center justify-center gap-4 md:gap-8 glass-panel pt-10 px-8 md:px-12 py-6 rounded-[2.5rem] relative overflow-hidden mx-auto shadow-md">
+                    <div class="inline-flex items-center justify-center gap-4 md:gap-8 glass-panel px-8 md:px-12 py-6 rounded-[2.5rem] relative overflow-hidden mx-auto shadow-md">
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shimmer_3s_infinite] -translate-x-[200%]"></div>
                         <img src="{{ asset('images/faradah.svg') }}" alt="فرادة" class="h-7 md:h-9">
                         <div class="w-px h-8 md:h-10 bg-gray-300/50"></div>
