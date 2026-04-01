@@ -347,14 +347,14 @@
                 <div class="hidden lg:block w-px bg-primary/10 self-stretch my-10 opacity-50"></div>
 
                 <!-- Product Highlight (Left Side in RTL) -->
-                <div class="lg:w-1/3 flex flex-col">
-                    <div class="flex items-center gap-3 mb-4 pr-4">
-                        <span class="h-px w-8 bg-success/40"></span>
+                <div class="lg:w-1/3 relative">
+                    <div class="absolute -top-10 right-4 flex items-center gap-3 z-20">
+                        <span class="h-px w-6 bg-success/40"></span>
                         <span class="text-success font-black text-xs uppercase tracking-widest">من منتجاتنا الرقمية</span>
                     </div>
 
                     <!-- Option 3: Wdeem -->
-                    <div @click="openQRModal('{{ asset('images/qr-code/wdeem-qr.png') }}', 'منصة وديم', 'امسح الرمز بصورة مباشرة للبدء في صياغة الأوقاف والوصايا مجانًا')" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,180,141,0.15)] border-2 border-success/30 relative overflow-hidden bg-gradient-to-b from-white/50 to-success/5 flex-grow">
+                    <div @click="openQRModal('{{ asset('images/qr-code/wdeem-qr.png') }}', 'منصة وديم', 'امسح الرمز بصورة مباشرة للبدء في صياغة الأوقاف والوصايا مجانًا')" class="glass-panel group rounded-[2.5rem] p-10 flex flex-col items-center text-center cursor-pointer transform transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,180,141,0.15)] border-2 border-success/30 relative overflow-hidden bg-gradient-to-b from-white/50 to-success/5 h-full">
                         <div class="absolute top-6 right-6 z-20">
                             <span class="bg-success text-white text-xs font-black px-4 py-1.5 rounded-full shadow-lg animate-pulse uppercase tracking-wider">مجانية بالكامل</span>
                         </div>
@@ -369,7 +369,9 @@
                         <div class="mt-8 z-10 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                             <span class="bg-success/10 text-success font-bold px-8 py-3 rounded-full border border-success/20 flex items-center gap-2">
                                 <span>افتح الرمز السريع</span>
-                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v1m0 11v1m5-6h-1m-11 0h-1M5.05 6.464L4.343 5.757m15.314 15.314l-.707-.707M18.243 5.757l-.707.707M6.464 18.243l-.707-.707M12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm14 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                            </svg>
                             </span>
                         </div>
                     </div>
@@ -394,7 +396,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
                     </button>
                     <h2 class="text-4xl font-black text-primary mb-2 drop-shadow-sm">منظومة استثمار المستقبل القابضة</h2>
-                    <p class="text-xl text-secondary font-bold">شركاتنا الرائدة في خدمة قطاع الأوقاف</p>
+                    <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">شركة استثمار المستقبل القابضة، منظومة متكاملة لخدمة الأوقاف، نجمع فيها بين الإتقان، والاستدامة، وتعظيم الأثر، من خلال خدمات استشارية وإدارية وتشغيلية وتقنية متخصصة.</p>
                 </div>
 
                 <!-- Modern Grid -->
